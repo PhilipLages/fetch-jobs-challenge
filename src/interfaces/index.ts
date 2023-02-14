@@ -5,3 +5,7 @@ export interface IJob {
   jobDesc: string;
   skillNames: string[];
 };
+
+export type JobsProps = {
+  jobs: IJob[]
+}
