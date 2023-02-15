@@ -10,9 +10,9 @@ export interface IJob {
 
 // Define the interface for the data returned by the API
 export interface IJobs {
-  jobs: IJob[]
+  jobs: IJob[];
 }
 
 export interface IJobCard {
-  job: IJob
+  job: IJob;
 }

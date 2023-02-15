@@ -1,7 +1,7 @@
 import { IJob, IJobs } from "@/interfaces/Job";
 import { NextPage } from "next";
-import { FormEventHandler, SyntheticEvent, useState } from "react";
-import { Button } from "./Button";
+import { SyntheticEvent, useState } from "react";
+import Button from "./Button";
 import JobCard from "./JobCard";
 
 
@@ -49,11 +49,11 @@ const JobsList: NextPage<IJobs> = ({ jobs }) => {
         </div>
         <section>
           <form 
-            className="flex flex-col lg:flex md:flex-row"
+            className="flex flex-col items-center md:flex-row"
             onSubmit={handleFilterByCompany}
           >
             <input 
-              className="mx-2 border-2 border-slate-800 rounded"
+              className="w-full mx-2 border-2 border-slate-800 rounded md:w-60"
               type="text" 
               name="companyName" 
               id="companyName"
@@ -81,6 +81,6 @@ const JobsList: NextPage<IJobs> = ({ jobs }) => {
     </main>
     </section>    
   )
-}
+};
 
 export default JobsList;
