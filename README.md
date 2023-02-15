@@ -2,6 +2,22 @@
 
 This is a front-end application built with ReactJS, NodeJS, NextJS, TypeScript, TailwindCSS, and Server Side Rendering. The app fetches data from the Zippia job API, using a post request and request body parameters.
 
+___
+
+## Demo
+
+<img src='src/images/jobsgif.gif' alt='Application Demo'/>
+
+___
+
+## Deploy
+
+This application is deployed on Vercel at the following URL:
+
+-   [https://jobs-api-gules.vercel.app/test/jobs](https://jobs-api-gules.vercel.app/test/jobs)
+
+___
+
 ## Getting Started
 
 To run the application locally, follow these steps:
