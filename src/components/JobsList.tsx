@@ -74,7 +74,7 @@ const JobsList: NextPage<IJobs> = ({ jobs }) => {
         </div>
         { filteredJobs.map(job => (
           <div className="flex justify-center" key={job.jobId}>
-            <JobCard job={ job } key={job.jobId}/>
+            <JobCard job={ job }/>
           </div>
         )) }
       </section>
