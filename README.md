@@ -1,38 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Jobs API with NextJS and SSR
+
+This is a front-end application built with ReactJS, NodeJS, NextJS, TypeScript, TailwindCSS, and Server Side Rendering. The app fetches data from the Zippia job API, using a post request and request body parameters.
 
 ## Getting Started
 
-First, run the development server:
+To run the application locally, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+1.  Clone the repository.
+2.  Install the required dependencies using `npm install`.
+3.  Create a `.env.local` file and add the following environment variables:
+
+```code
+  API_URL=https://www.zippia.com/api/jobs/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4.  Run the application using `npm run dev`.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+___
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Features
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+-   The app can list the first 10 jobs with cards, displaying job title, the company name, and job description.
+-   It has a filter to find jobs by company name.
+-   It has a filter to find jobs published in the last 7 days.
+-   The app was developed with mobile-first design and is responsive.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+___
 
-## Learn More
+## Technologies Used
 
-To learn more about Next.js, take a look at the following resources:
+-   ReactJS
+-   NodeJS
+-   NextJS
+-   TypeScript
+-   TailwindCSS
+-   Server Side Rendering
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## The Importance of Server-Side Rendering
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<details>
+  Server-side rendering (SSR) is a technique used to render web pages on the server and send the fully rendered page to the client. SSR has become increasingly important in modern web development due to the rise of single-page applications (SPAs) built with front-end frameworks like React, Vue, and Angular.
 
-## Deploy on Vercel
+SPAs are great for delivering fast and responsive user experiences, but they have some drawbacks. One of the main issues is that they rely on JavaScript to render the page, which can cause performance and SEO problems. When a user visits an SPA, the server sends an HTML file with an empty `<div>` tag and a bundle of JavaScript code that the browser must download and execute to render the page. This can lead to slower page load times, poor search engine visibility, and a poor user experience for users with slow internet connections.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Server-side rendering solves these problems by rendering the HTML on the server and sending the fully rendered page to the client. This means that the client can start rendering the page immediately, even before the JavaScript bundle is downloaded and executed. This can significantly improve the time to first paint (TTFP) and time to interactive (TTI) metrics, which are important for delivering a fast and responsive user experience.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+In addition to improving performance, SSR can also improve SEO by making it easier for search engines to crawl and index the pages of your website. When search engines crawl an SSR website, they see fully rendered HTML, just like a regular website, which can improve your website's ranking in search engine results.
+
+Overall, server-side rendering is an important technique for building modern web applications, especially for delivering fast and responsive user experiences and improving SEO.
+</details>
+
+___
+
+## API
+
+The app fetches data from the Zippia job API, using a post request and the following request body parameters:
+
+```json
+{
+  "companySkills": true,
+  "dismissedListingHashes": [],
+  "fetchJobDesc": true,
+  "jobTitle": "Business Analyst",
+  "locations": [],
+  "numJobs": 20,
+  "previousListingHashes": []
+}
+```
+
+___
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](https://opensource.org/license/mit-0/) file for more information.
