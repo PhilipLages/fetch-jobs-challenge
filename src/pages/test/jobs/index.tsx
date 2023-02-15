@@ -2,7 +2,7 @@ import JobsList from "@/components/JobsList";
 import { GetServerSideProps } from 'next';
 
 import { NextPage } from "next";
-import { IJobs } from "@/interfaces";
+import { IJobs } from "@/interfaces/Job";
 import api from "@/services/api";
 import { APIRequestBody } from "@/utils/APIRequestBody";
 

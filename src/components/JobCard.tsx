@@ -15,7 +15,7 @@ const JobCard = ({ job }: IJobCard) => {
         <h3>{ job.companyName }</h3>
       </div>
         <h3>Description</h3>
-      <div className='h-44 overflow-hidden hover:overflow-auto'>
+      <div className='h-44 overflow-auto'>
         <p className='leading-8'>{ description }</p>
       </div>
     </div>

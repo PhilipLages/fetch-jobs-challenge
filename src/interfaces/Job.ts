@@ -5,6 +5,7 @@ export interface IJob {
   companyName: string;
   jobDescription: string;
   skillNames: string[];
+  postingDate: Date;
 };
 
 // Define the interface for the data returned by the API
