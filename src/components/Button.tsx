@@ -12,4 +12,4 @@ const Button = ({type, onClick, text}: IButton) => {
   )
 };
 
-export default Button
+export default Button;
